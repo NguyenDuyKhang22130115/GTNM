@@ -60,6 +60,13 @@ h1 {
     cursor: pointer;
 }
 
+.save-btn {
+    position: absolute;
+    background-color: rgb(9, 255, 0);
+    margin: 12px calc(50% - 40px);
+    cursor: pointer;
+}
+
 .btn:hover {
     opacity: 0.5;
 }
