@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implement</title>
+    <link rel="stylesheet" href="implement.css">
+    <link rel="stylesheet" href="implement.js">
+</head>
+
+<body>
+    <div class="box">
+        <h1>Quản lý trái cây</h1>
+        <div class="form">
+            <div class="form_item">
+                <label class="label" for="name">Tên</label>
+                <input class="input" type="name" placeholder=" Nhập tên">
+            </div>
+            <div class="form_item">
+                <label class="label" for="price">Giá</label>
+                <input class="input" type="price" placeholder=" Nhập giá">
+            </div>
+            <div class="form_item">
+                <label class="label" for="quantity">Số lượng</label>
+                <input class="input" type="quantity" placeholder=" Nhập số lượng">
+            </div>
+            <button type="button" class="btn add-btn" onclick="addFruit()">Thêm</button>
+            <button type="button" class="btn add-btn" onclick="saveFruit()" hidden>Lưu</button>
+        </div>
+        <div class="search">
+            <h2>Tìm kiếm</h2>
+            <input class="input" type="search" placeholder=" Nhập từ khóa">
+            <div class="search_button">
+                <button type="button" class="btn search-btn" onclick="searchFruit()">Tìm</button>
+                <button type="button" class="btn cancel-btn" onclick="cancelSearch()">Hủy tìm</button>
+            </div>
+        </div>
+        <div class="list">
+            <h2>Danh sách trái cây</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Tên</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Cam</td>
+                        <td>20000</td>
+                        <td>100</td>
+                        <td>
+                            <button type="button" class="btn edit-btn" onclick="editFruit()">Sửa</button>
+                            <button type="button" class="btn delete-btn" onclick="deleteFruit()">Xóa</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="implement.js"></script>
+</body>
+
+</html>
