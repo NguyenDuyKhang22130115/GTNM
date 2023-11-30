@@ -9,6 +9,8 @@
 </head>
 
 <body>
+    <h1>Chức năng bình luận trong dự án</h1>
+    <p>&nbsp;</p>
     <div class="container">
         <div class="head">
             <h1>Bình luận</h1>
@@ -22,7 +24,7 @@
             <img src="img/guest.png" alt="">
             <div class="content">
                 <h2>Bình luận với tên : </h2>
-                <input type="text" value="Thực khách" class="user">
+                <input type="text" value="Khách hàng" class="user">
 
                 <div class="commentinput">
                     <input type="text" placeholder="Enter comment" class="usercomment">
@@ -61,7 +63,7 @@
         function addPost() {
             if (!userComment.value) return;
             userId.name = userName.value;
-            if (userId.name === "Thực khách") {
+            if (userId.name === "Khách hàng") {
                 userId.identity = false;
                 userId.image = "img/guest.png";
             } else {
