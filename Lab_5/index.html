@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_5</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>Bình luận</h1>
+        </div>
+        <div><span id="comment">0</span> Bình luận</div>
+        <div class="text">
+            <p>Hãy để lại nhận xét của bạn</p>
+        </div>
+        <div class="comments"></div>
+        <div class="commentbox">
+            <img src="img/guest.png" alt="">
+            <div class="content">
+                <h2>Bình luận với tên : </h2>
+                <input type="text" value="Thực khách" class="user">
+
+                <div class="commentinput">
+                    <input type="text" placeholder="Enter comment" class="usercomment">
+                    <div class="buttons">
+                        <button type="submit" disabled id="publish">Gửi Bình Luận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        "use strict";
+        const userId = {
+            name: null,
+            identity: null,
+            image: null,
+            message: null,
+            date: null
+        }
+        const userComment = document.querySelector(".usercomment");
+        const publishBtn = document.querySelector("#publish");
+        const comments = document.querySelector(".comments");
+        const userName = document.querySelector(".user");
+        userComment.addEventListener("input", e => {
+            if (!userComment.value) {
+                publishBtn.setAttribute("disabled", "disabled");
+                publishBtn.classList.remove("abled");
+            } else {
+                publishBtn.removeAttribute("disabled");
+                publishBtn.classList.add("abled");
+            }
+        })
+
+
+        function addPost() {
+            if (!userComment.value) return;
+            userId.name = userName.value;
+            if (userId.name === "Thực khách") {
+                userId.identity = false;
+                userId.image = "img/guest.png";
+            } else {
+                userId.identity = true;
+                userId.image = "img/user.png"
+            }
+
+            userId.message = userComment.value;
+            userId.date = new Date().toLocaleString();
+            let published =
+                `<div class="parents">
+                <img src="${userId.image}">
+                <div>
+                    <h1>${userId.name}&nbsp;&nbsp;<h1>
+                    <p>${userId.message}</p>
+                    </div> <span class="date">${userId.date}</span> </div>
+                </div>
+            </div>`;
+
+            comments.innerHTML += published;
+            userComment.value = "";
+            
+            let commentNum = document.querySelectorAll(".parents").length;
+            document.getElementById("comment").textContent = commentNum;
+        }
+
+        publishBtn.addEventListener("click", addPost)
+    </script>
+
+</body>
+
+</html>
