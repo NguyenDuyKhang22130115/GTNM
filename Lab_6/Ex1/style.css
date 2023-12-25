@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    height: 170px;
+    background-image: url(img/Langbac.jpg);
+}
+
+.title>h1 {
+    margin: auto;
+}
+
+.box {
+    margin: 24px 48px;
+    justify-content: space-around;
+    width: 60%;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    font-size: 25px;
+}
+
+img {
+    width: 150px;
+}
+
+.img>p {
+    font-style: italic;
+    font-size: 20px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 50px auto;
+}
+
+.content>p {
+    margin: auto 50px;
+}
