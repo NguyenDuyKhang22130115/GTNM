@@ -20,9 +20,11 @@ body {
 .logo {
     margin: auto;
 }
+
 .home {
-    background-color:#00aaff;
+    background-color: #00aaff;
 }
+
 .menu {
     width: 80%;
     background-color: rgb(77, 0, 155);
@@ -58,7 +60,7 @@ body {
 .menu ul li:hover .submenu {
     display: block;
     position: absolute;
-    background:  rgb(77, 0, 155);
+    background: rgb(77, 0, 155);
     margin-top: 15px;
     margin-left: -15px;
 }

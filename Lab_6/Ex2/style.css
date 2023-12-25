@@ -57,11 +57,13 @@ main {
     margin: 50px;
     flex-direction: column;
 }
+
 .left>p {
     margin-bottom: 50px;
     margin-top: 50px;
     font-size: 20px;
 }
+
 button {
     width: 300px;
     height: 60px;

@@ -50,13 +50,13 @@ h2 {
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    
+
 }
 
 .quotes {
     display: flex;
     padding: 24px 12px;
-    
+
     text-align: center;
     font-size: 30px;
     flex-direction: row;
@@ -65,6 +65,7 @@ h2 {
 .quotes p {
     padding: 12px 24px;
 }
+
 .image {
     padding: 12px 36px;
     align-items: center;
