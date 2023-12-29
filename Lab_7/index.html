@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 7</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+</head>
+
+<body>
+  
+
+  <div class="container">
+    <header>
+      <h1 id="title" class="text_center">Biểu Mẫu Khảo Sát Về Việc Dùng Điện thoại</h1>
+      <p id="description" class="description text_center">
+        Đối tượng: Học sinh/ Sinh viên
+      </p>
+    </header>
+    
+    <form id="survey_form" autocomplete="off">
+      <div class="form_group">
+        <label for="name" id="name_label"> Tên: </label>
+        <input type="text" name="name" id="name" class="form_control" placeholder="Điền tên của bạn" required />
+      </div>
+      <div class="form_group">
+        <label for="number" id="number_label">
+          Tuổi:
+        </label>
+        <input type="number" name="age" id="number" min="10" max="30" class="form_control" placeholder="Tuổi" />
+      </div>
+      <div class="form_group">
+        <p>Bạn đang là:</p>
+        <label>
+          <input type="radio" name="user-recommend1" value="hs" class="input_radio" checked />
+          Học sinh
+        </label>
+        <label>
+          <input type="radio" name="user-recommend1" value="sv" class="input_radio" />
+          Sinh viên
+        </label>
+      </div>
+      <div class="form_group">
+        <p>Thời gian sử dụng điện thoại trung bình của bạn trong 1 ngày?</p>
+        <select name="role" id="dropdown" class="form_control">
+          <option value="verylow">Dưới 3h</option>
+          <option value="low">Từ 3 đến 5h</option>
+          <option value="medium" selected>Từ 5 đến 7h</option>
+          <option value="high">Từ 7 đến 9h</option>
+          <option value="veryhigh">Trên 9h</option>
+        </select>
+      </div>
+      <div class="form_group">
+        <p>Hệ điều hành bạn đang dùng là:</p>
+        <label>
+          <input type="radio" name="user-recommend" value="definitely" class="input_radio" checked />
+          Android
+        </label>
+        <label>
+          <input type="radio" name="user-recommend" value="maybe" class="input_radio" />
+          IOS
+        </label>
+        <label>
+          <input type="radio" name="user-recommend" value="not-sure" class="input_radio" />
+          Cả 2
+        </label>
+      </div>
+
+      <div class="form_group">
+        <p>Mục đích chính khi dùng điện thoại của bạn là:</p>
+        <select name="mostLike" id="most-like" class="form_control">
+          <option value="study">Học tập</option>
+          <option value="job">Công việc</option>
+          <option value="entertaimnet">Giải trí</option>
+          <option value="other">Khác</option>
+        </select>
+      </div>
+      <div id="toast"></div>
+      <div class="form_group">
+        <p>Bạn có dùng những ứng dụng nào dưới đây?</p>
+        <label>
+          <input type="checkbox" name="prefer" value="fb" class="input_checkbox" />
+          Facebook
+        </label>
+        <label>
+          <input type="checkbox" name="prefer" value="mes" class="input_checkbox" />
+          Messenger
+        </label>
+        <label>
+          <input type="checkbox" name="prefer" value="zl" class="input_checkbox" />
+          Zalo
+        </label>
+        <label>
+          <input type="checkbox" name="prefer" value="toptop" class="input_checkbox" />
+          TikTok
+        </label>
+        <label>
+          <input type="checkbox" name="prefer" value="Youtube" class="input_checkbox" />
+          Youtube
+        </label>
+      </div>
+      <div class="form_group">
+        <p>Còn điều gì bạn muốn chia sẻ?</p>
+        <textarea name="comment" class="input_textarea" id="comment" placeholder="Nhập ý kiến của bạn..."></textarea>
+      </div>
+      <div class="form_group">
+        <button type="submit" class="submit_btn">Hoàn tất</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
