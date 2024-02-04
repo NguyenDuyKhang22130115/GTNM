@@ -22,7 +22,8 @@ body {
 }
 
 .home {
-    background-color: #00aaff;
+    background-color: #008cff;
+    border-radius: 10px;
 }
 
 .menu {
